@@ -172,6 +172,8 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    semantic-ui-sass (2.4.4.0)
+      sassc
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -227,6 +229,7 @@ DEPENDENCIES
   rails (~> 6.0.6, >= 6.0.6.1)
   sass-rails (>= 6)
   selenium-webdriver
+  semantic-ui-sass
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
