@@ -17,3 +17,31 @@ require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+function scroll_bottom(){
+  if ($("#message").length > 0 ) {
+    $("#message").scrollTop($("#message")[0].scrollHeight)
+  }
+}
+
+$("#message_body").keypress(function (event) {
+            if (event.keyCode === 13) {
+                $("button").click();
+                $(this).val('');
+            }
+        });
+
+
+$(document).on('turbolinks:load', function () {
+  scroll_bottom();
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
+})
+

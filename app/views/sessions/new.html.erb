@@ -1,2 +1,41 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+
+<h4 class="ui center medium aligned icon header">
+  <i class="circular orange chat icon"></i>
+  wellcome to chat room!!!
+</h4>
+
+
+
+
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+
+      <%= form_for(:session, html: { class: "ui form", role: "form"}, url: login_path ) do |f|%>
+          
+            <%= f.label :user_name , "user name"%>
+            <%= f.text_field :user_name, placeholder: "user name" %>
+            <br/>
+            <br/>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            <br/>
+            <br/>
+            <%= f.submit %>
+              
+      <% end %>
+
+
+    </div>
+    <div class="middle aligned column">
+      <div class="ui big button">
+        <i class="signup icon"></i>
+        Sign Up
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
